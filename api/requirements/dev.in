@@ -1,0 +1,7 @@
+-r common.in
+
+pip-tools
+black
+pytest-django
+pytest
+ipython

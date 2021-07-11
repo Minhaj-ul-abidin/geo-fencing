@@ -1,0 +1,7 @@
+django
+djangorestframework
+django-environ
+drf-yasg
+psycopg2-binary
+django-filter
+djangorestframework-gis

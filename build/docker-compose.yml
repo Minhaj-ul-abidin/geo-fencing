@@ -1,0 +1,29 @@
+version: '3'
+ 
+services:
+  db:
+    image: postgis/postgis
+    environment:
+      - DB_HOST=db
+      - POSTGRES_DB=app
+      - POSTGRES_USER=postgres_user
+      - POSTGRES_PASSWORD=supersecretpassword
+    volumes:
+      - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+  app:
+    container_name: GeoFence
+    build:
+      context: ..
+      dockerfile: build/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../api/:/app
+    environment:
+      - DB_HOST=db
+      - POSTGRES_DB=app
+      - TEST_DB=testdb
+      - POSTGRES_USER=postgres_user
+      - POSTGRES_PASSWORD=supersecretpassword
+    depends_on:
+      - db
