@@ -40,7 +40,8 @@ DJANGO_DEFAULT_APPS = [
 THIRD_PARTY_APPS = [
     "rest_framework",
     "drf_yasg",
-    "rest_framework_gis"
+    "rest_framework_gis",
+    "django_extensions"
 ]
 
 OUR_APPS = []

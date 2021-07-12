@@ -5,3 +5,4 @@ black
 pytest-django
 pytest
 ipython
+django_extensions
