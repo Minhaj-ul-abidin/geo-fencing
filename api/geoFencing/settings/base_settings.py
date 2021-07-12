@@ -44,7 +44,7 @@ THIRD_PARTY_APPS = [
     "django_extensions"
 ]
 
-OUR_APPS = []
+OUR_APPS = ['geoFencing.apps.common.apps.CommonConfig','geoFencing.apps.account.apps.AccountConfig']
 
 INSTALLED_APPS = DJANGO_DEFAULT_APPS + THIRD_PARTY_APPS + OUR_APPS
 
@@ -99,6 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "account.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
