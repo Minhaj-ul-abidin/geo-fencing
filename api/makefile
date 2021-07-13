@@ -1,6 +1,5 @@
-
-# build:
-# 	docker-compose -f ../ -p servicearea up -d --build --remove-orphans
+build_dev:
+	docker-compose -f ../build/docker-compose.yml -p geofencing up -d --build --remove-orphans
 
 container:
 	docker exec -it GeoFence bash
@@ -9,8 +8,7 @@ test:
 	DJANGO_SETTINGS_MODULE=settings.test_settings pytest -v service_area/tests
 
 shell:
-	./manage.py shell_plus
-
+	./manage.py shell
 run:
 	./manage.py runserver 0:8000
 
