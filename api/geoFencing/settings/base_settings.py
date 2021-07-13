@@ -44,7 +44,7 @@ THIRD_PARTY_APPS = [
     "django_extensions"
 ]
 
-OUR_APPS = ['geoFencing.apps.common.apps.CommonConfig','geoFencing.apps.account.apps.AccountConfig']
+OUR_APPS = ['geoFencing.apps.common.apps.CommonConfig','geoFencing.apps.account.apps.AccountConfig','geoFencing.apps.geofence.apps.GeofenceConfig']
 
 INSTALLED_APPS = DJANGO_DEFAULT_APPS + THIRD_PARTY_APPS + OUR_APPS
 
