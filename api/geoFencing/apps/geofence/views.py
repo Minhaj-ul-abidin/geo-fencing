@@ -57,6 +57,11 @@ class ServiceAreaViewSet(viewsets.ModelViewSet):
     filterset_class = ServiceAreaFilter
 
     def list(self, request, *args, **kwargs):
+        """
+        latitude -- lat value of the position tp query
+        longitude -- long value of the position to query
+        """ 
+    
         logger.info(
             f"User {request.user} GET service-area-list with args {dict(request.query_params)}"
         )
