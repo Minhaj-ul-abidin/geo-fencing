@@ -73,6 +73,8 @@ djangorestframework-gis==0.17
     # via -r requirements/dev.txt
 drf-yasg==1.20.0
     # via -r requirements/dev.txt
+gunicorn==20.1.0
+    # via -r requirements/dev.txt
 idna==2.10
     # via
     #   -r requirements/dev.txt

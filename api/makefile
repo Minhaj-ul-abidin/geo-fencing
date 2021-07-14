@@ -1,11 +1,14 @@
 build_dev:
-	docker-compose -f ../build/docker-compose.yml -p geofencing up -d --build --remove-orphans
+	docker-compose --env-file ../build/env.dev -f ../build/docker-compose-dev.yml -p geofencing up -d --build --remove-orphans
 
+build_prod:
+	docker-compose --env-file ../build/env.prod -f ../build/docker-compose.yml -p geofencing up -d --build --remove-orphans
+	
 container:
 	docker exec -it GeoFence bash
 
 test:
-	DJANGO_SETTINGS_MODULE=settings.test_settings pytest -v service_area/tests
+	DJANGO_SETTINGS_MODULE=geoFencing.settings.test_settings pytest -v geoFencing/apps/geofence/tests.py
 
 shell:
 	./manage.py shell
