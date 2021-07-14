@@ -21,7 +21,7 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Service Area API",
+        title="GeoFence Area API",
         default_version="v1",
         description="This API allows to manage service providers, service area.",
     ),
@@ -35,5 +35,5 @@ urlpatterns = [
         r"",
         schema_view.with_ui("swagger", cache_timeout=0),
         name="swagger-ui",
-    ),
+    )
 ]
